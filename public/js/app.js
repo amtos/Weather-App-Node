@@ -1,14 +1,11 @@
 // Client side JavaScript which runs in browser
 console.log('Client side Javascript file')
 
-
-
 const weatherForm = document.querySelector('form')
 const search = document.querySelector('input')
 const firstMsg = document.querySelector('#msg1')
 const secondMsg = document.querySelector('#msg2')
 
-// firstMsg.textContent = 'from Javascript'
 
 // e is the event object in callback
 weatherForm.addEventListener('submit', (e) => {
@@ -17,7 +14,7 @@ weatherForm.addEventListener('submit', (e) => {
     firstMsg.textContent = 'Loading ...'
     const location = search.value
     // fetch API only works here
-    fetch('http://localhost:3000/weather?address='+location).then((response) => {
+    fetch('/weather?address='+location).then((response) => {
     // data is the JavaScript object from response
     // response fetched from web-server
         response.json().then((data) => {
