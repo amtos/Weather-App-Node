@@ -17,7 +17,7 @@ const forecast = (latitude, longitude, callback) => {
         }
         else
         {
-            callback(undefined, body.daily.data[0].summary + " It is currently "+ body.currently.temperature+" degrees out with a "+ body.currently.precipProbability*100+"% chance of rain. For today, temperator may rise up to highs of "+body.daily.data[0].temperatureMax+" degrees and dip to lows of "+body.daily.data[0].temperatureMin+" degrees.")
+            callback(undefined, body.daily.data[0].summary + " It is currently "+ body.currently.temperature+" degrees out with a "+ body.currently.precipProbability*100+"% chance of rain. For today, temperator may rise up to highs of "+body.daily.data[0].temperatureHigh+" degrees and dip to lows of "+body.daily.data[0].temperatureLow+" degrees.")
             
         }
        
